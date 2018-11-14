@@ -8,7 +8,7 @@ const publicAPI = {
     // This next line hashes the user password and the random salt
     // this salt and hash (and not the actual password) will then get stored in the database
     // return bcrypt.hashSync(password, salt);
-    // return bcrypt.hashSync(password, '$2b$10$p5Wkte33hlOBOcUtJie6H.');
+    return bcrypt.hashSync(password, '$2b$10$p5Wkte33hlOBOcUtJie6H.');
     return password;
   },
   comparePassword(candidatePassword, storedPassword) {
